@@ -16,10 +16,10 @@
 
 package org.bitcoinj.store;
 
-import sun.misc.*;
-import sun.nio.ch.*;
+//import sun.misc.*;
+//import sun.nio.ch.*;
 
-import java.nio.*;
+//import java.nio.*;
 
 /**
  * <p>This class knows how to force an mmap'd ByteBuffer to reliquish its file handles before it becomes garbage collected,
@@ -32,7 +32,7 @@ import java.nio.*;
  * <p>It is a separate class to avoid hitting unknown imports when running on other JVMs.</p>
  */
 public class WindowsMMapHack {
-    public static void forceRelease(MappedByteBuffer buffer) {
+    public static void forceRelease(Object buffer) {
         //Cleaner cleaner = ((DirectBuffer) buffer).cleaner();
         //if (cleaner != null) cleaner.clean();
     }
